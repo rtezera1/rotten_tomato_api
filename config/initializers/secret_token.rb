@@ -9,4 +9,9 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RottenTomatoApi::Application.config.secret_key_base = 'c2d8530788946f263b1b8e2469185e2d578c6eb753aa47c38c45cb3f074248a5749e5cfbe587f6a4080346e68260e531c80e4025664adce7ee67ca4299e31afc'
+
+  if Rails.env.development? || Rails.env.test?
+    RottenTomatoApi::Application.config.secret_key_base = ('x' * 128)
+  else
+    RottenTomatoApi::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+  end

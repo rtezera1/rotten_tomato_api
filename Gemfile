@@ -28,13 +28,17 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'rottentomatoes'
+
+gem 'simple_form'
+
+gem 'dotenv-rails' 
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-group :development, :test do 
-  gem 'dotenv-rails' 
+group :development, :test do  
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'capybara'

@@ -1,10 +1,10 @@
 
 class RottenmoviesController < ApplicationController
-include RottenTomatoes
-require 'rottentomatoes'
+  include RottenTomatoes
+  require 'rottentomatoes'
 
   def show
-    @movie = RottenMovie.find(params[:title])
+    @movie = RottenMovie.find(title: 'Iron Man')
     if @movie.valid?
       redirect_to new_rottenmovie_path
     else
@@ -15,4 +15,5 @@ require 'rottentomatoes'
   def new
     @movie.title
   end
+  
 end

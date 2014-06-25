@@ -15,7 +15,7 @@ Bundler.require(*Rails.groups)
 
 module RottenTomatoApi
   class Application < Rails::Application
-    Rotten.api_key=ENV['TOMATO_TOKEN']
+   
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

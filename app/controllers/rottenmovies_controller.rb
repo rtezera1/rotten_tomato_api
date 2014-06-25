@@ -4,7 +4,7 @@ class RottenmoviesController < ApplicationController
   require 'rottentomatoes'
 
   def show
-    @movie = RottenMovie.find(title: 'Iron Man')
+    @movie = RottenMovie.find(title: params[:title])
     if @movie.valid?
       redirect_to new_rottenmovie_path
     else

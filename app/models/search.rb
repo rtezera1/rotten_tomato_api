@@ -13,11 +13,7 @@ class Search
   end
 
   def self.title(query)
-    if query[:title] != nil || query[:title] != ''
       return query[:title]
-    else
-      return "Not Found"
-    end
   end
 
   def self.year(query) 
@@ -28,11 +24,11 @@ class Search
     end
   end
 
-  def self.synopsis(query)
-    if query[:synopsis] == nil || query[:synopsis] == " "
+  def self.posters(query)
+    if query[:posters] == nil || query[:posters] == " "
       return "Not Found"
     else
-      return query[:synopsis]
+      return query[:posters]
     end
   end
 end

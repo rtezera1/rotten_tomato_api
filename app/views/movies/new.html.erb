@@ -1,7 +1,15 @@
 <h1> Insert a Movie Title </h1>
-<%= simple_form_for @movie do |f| %>
-  <%= f.input :title %>
-  <%= f.button :submit %>
+<%= simple_form_for (@movie) do |f| %>
+ <div class="row">
+  <div class="large-5 coumns">
+    <div>
+       <%= f.input :title, placeholder: 'Title', 
+       label: 'Search Youre Favorite Movie' %>
+    </div>
+    <div>
+       <%= f.button :submit, 'Search a Movie' %>
+    </div>
+  </div>
+</div>
 <% end %>
-
 

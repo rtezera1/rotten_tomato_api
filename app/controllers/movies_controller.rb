@@ -22,7 +22,7 @@ class MoviesController < ApplicationController
     @query = Search.search(@movie.title)
     @title = Search.title(@query)
     @year = Search.year(@query)
-    @synopsis = Search.synopsis(@query)
+    @posters = Search.posters(@query)
   end
 
   def movie_params

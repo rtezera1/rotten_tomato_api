@@ -35,6 +35,14 @@ gem 'dotenv-rails'
 
 gem 'foundation-rails'
 
+gem "newrelic_rpm", "~> 3.5.7.57.beta"
+
+gem 'rails_12factor', group: :production
+
+gem 'unicorn-rails'
+
+gem 'foreman'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
